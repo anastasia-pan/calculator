@@ -14,7 +14,8 @@ code {
     monospace;
 }
 button {
-  font-weight: 200;
+  font-weight: bolder;
+  color: grey;
   border-radius: 50%;
   background: hsla(333, 100%, 53%, 1);
 
