@@ -1,13 +1,60 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  color: grey;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+button {
+  font-weight: 200;
+  border-radius: 50%;
+  background: hsla(333, 100%, 53%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(333, 100%, 53%, 1) 0%,
+    hsla(325, 71%, 70%, 1) 50%,
+    hsla(33, 94%, 57%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(333, 100%, 53%, 1) 0%,
+    hsla(325, 71%, 70%, 1) 50%,
+    hsla(33, 94%, 57%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(333, 100%, 53%, 1) 0%,
+    hsla(325, 71%, 70%, 1) 50%,
+    hsla(33, 94%, 57%, 1) 100%
+  );
+  color: purple;
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FF0F7B", endColorstr="#E97CBB", GradientType=1 );
+}
+
+.wide {
+  display: flex;
+  justify-content: center;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+}
+
+.screen {
+  min-height: 50px;
+  background-color: grey;
 }
