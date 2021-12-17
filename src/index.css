@@ -123,9 +123,30 @@ body {
   border-color: green;
   text-shadow: 1px 1px grey;
   min-height: 50px;
-  background-color: pink;
+  /* background-color: pink; */
   padding: 5px;
   font-size: 25px;
+  background: hsla(31, 90%, 76%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(31, 90%, 76%, 1) 0%,
+    hsla(302, 82%, 76%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(31, 90%, 76%, 1) 0%,
+    hsla(302, 82%, 76%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(31, 90%, 76%, 1) 0%,
+    hsla(302, 82%, 76%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F9C58D", endColorstr="#F492F0", GradientType=1 );
 }
 
 .operators {
