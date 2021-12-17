@@ -114,6 +114,7 @@ body {
 }
 
 .screen {
+  box-shadow: 1px 1px grey;
   display: flex;
   align-content: center;
   border-radius: 15px;

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { columnTransformDependencies, evaluate } from "mathjs";
-import { useSound } from "use-sound";
+import { Howl, Howler } from "howler";
 import click from "./sounds/click.wav";
 
 const Calculator = () => {
@@ -28,8 +28,12 @@ const Calculator = () => {
     setUserInput("");
   };
 
-  const playClick = () => {
-    useSound();
+  const clickPlay = () => {
+    var sound = new Howl({
+      src: ["./sounds/click.wav"],
+    });
+
+    sound.play();
   };
 
   return (
@@ -49,13 +53,13 @@ const Calculator = () => {
         </div>
         <div className="results">
           <button id="equals" onClick={getTotal}>
-            {" "}
-            ={" "}
+            =
           </button>
           <button id="AC" onClick={clearInput}>
             {" "}
             AC{" "}
           </button>
+          <button id="other" onClick={clickPlay}></button>
         </div>
       </div>
     </div>
