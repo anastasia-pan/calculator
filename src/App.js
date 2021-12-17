@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { columnTransformDependencies, evaluate } from "mathjs";
+import { useSound } from "use-sound";
+import click from "./sounds/click.wav";
 
 const Calculator = () => {
-  const operators = ["+", "-", "/", "x", "%"];
+  const operators = [".", "+", "-", "/", "x", "%"];
 
-  const numbers = ["7", "8", "9", "4", "5", "6", "1", "2", "3", "0", "."];
+  const numbers = ["7", "8", "9", "4", "5", "6", "1", "2", "3", "0"];
 
   //   "=",
   //   "AC",
@@ -27,14 +29,14 @@ const Calculator = () => {
   };
 
   const playClick = () => {
-    const click = "./sounds/click";
-    click.play();
+    useSound();
   };
 
   return (
     <div className="wide">
       <div className="calculator">
         <h1 className="screen">{userInput}</h1>
+
         <div className="numbers">
           {numbers.map((number, index) => (
             <Button key={index} number={number} getValue={getValue} />
@@ -44,8 +46,16 @@ const Calculator = () => {
           {operators.map((operator, index) => (
             <Button key={index} number={operator} getValue={getValue} />
           ))}
-          <button onClick={getTotal}> = </button>
-          <button onClick={clearInput}> AC </button>
+        </div>
+        <div className="results">
+          <button id="equals" onClick={getTotal}>
+            {" "}
+            ={" "}
+          </button>
+          <button id="AC" onClick={clearInput}>
+            {" "}
+            AC{" "}
+          </button>
         </div>
       </div>
     </div>
